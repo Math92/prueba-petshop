@@ -10,6 +10,14 @@ body {
 }
 
 header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header div:first-child.header {
+  display: none;
+}
+header div:last-child {
   background-color: #F0A83E;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2509803922);
   height: 3.4rem;
@@ -18,17 +26,17 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-header section:nth-child(1) {
+header div:last-child section:nth-child(1) {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
   align-items: center;
 }
-header section:nth-child(1) img {
+header div:last-child section:nth-child(1) img {
   width: 10.56px;
   height: 10px;
 }
-header section:nth-child(1) h1 {
+header div:last-child section:nth-child(1) h1 {
   color: #FFFFFF;
   font-size: 16px;
   font-weight: 700;
@@ -36,13 +44,13 @@ header section:nth-child(1) h1 {
   letter-spacing: 0em;
   text-align: left;
 }
-header section:nth-child(1) h1 span {
+header div:last-child section:nth-child(1) h1 span {
   color: #3C2313;
 }
-header section:nth-child(2) nav {
+header div:last-child section:nth-child(2) nav {
   display: none;
 }
-header section:nth-child(3) img {
+header div:last-child section:nth-child(3) img {
   cursor: pointer;
 }
 
@@ -380,4 +388,327 @@ footer div:nth-child(3) p {
   letter-spacing: 0em;
   text-align: left;
   color: #FFFFFF;
+}
+
+@media screen and (min-width: 1024px) {
+  header div:first-child.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222222;
+    height: 1.2rem;
+    padding: 0.5rem 6rem;
+  }
+  header div:first-child.header section:first-child p {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #F3F3F3;
+  }
+  header div:first-child.header section:last-child {
+    display: flex;
+    gap: 1rem;
+  }
+  header div:first-child.header section:last-child article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header div:first-child.header section:last-child article p {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #F3F3F3;
+  }
+  header div:first-child.header section:last-child article img {
+    width: 10px;
+    height: 9px;
+    border: 1px;
+  }
+  header div:last-child section:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header div:last-child section:nth-child(1) img {
+    width: 19px;
+    height: 19px;
+  }
+  header div:last-child section:nth-child(1) h1 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  header div:last-child section:nth-child(2) nav {
+    display: flex;
+  }
+  header div:last-child section:nth-child(2) nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  header div:last-child section:nth-child(2) nav ul li {
+    list-style: none;
+  }
+  header div:last-child section:nth-child(2) nav ul li img {
+    width: 15px;
+    height: 14px;
+  }
+  header div:last-child section:nth-child(2) nav ul li a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+  }
+  header div:last-child section:nth-child(3) {
+    display: none;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  main section:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1rem;
+    width: 100vw;
+    margin: 1rem;
+    height: 25.5rem;
+    background-repeat: no-repeat;
+    background-image: url("/img/background-bowl.png");
+  }
+  main section:nth-child(1) article:nth-child(1) {
+    margin: 0rem 1rem;
+    align-self: flex-end;
+    padding-right: 0;
+    width: 365px;
+    height: 54px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main section:nth-child(1) article:nth-child(1) h2 {
+    color: #3C2313;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  main section:nth-child(1) article:nth-child(2) {
+    width: 365px;
+    height: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 1rem;
+    align-self: flex-end;
+    padding-bottom: 10px;
+    padding-right: 0;
+  }
+  main section:nth-child(1) article:nth-child(2) p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  main section:nth-child(1) article:nth-child(3) {
+    width: 365px;
+    height: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 1rem;
+    align-self: flex-end;
+    padding-right: 0;
+  }
+  main section:nth-child(1) article:nth-child(3) button {
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    width: 8.8rem;
+    height: 3rem;
+    border-radius: 5px;
+    background-color: #F0A83E;
+    outline: none;
+    box-shadow: none;
+  }
+  main section:nth-child(2) {
+    height: 33.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main section:nth-child(2) article:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  main section:nth-child(2) article:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-direction: revert;
+  }
+  main section:nth-child(3) {
+    margin: 1.5rem;
+  }
+  footer div:first-child {
+    background-color: #F0A83E;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  footer div:first-child article:first-child {
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  footer div:first-child article:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    margin-bottom: 0rem;
+  }
+  footer div:first-child article:last-child input {
+    width: 271px;
+    height: 40px;
+    border-radius: 15px;
+    margin: 0.5rem;
+  }
+  footer div:first-child article:last-child button {
+    margin: 0.5rem;
+    width: 70px;
+    height: 34px;
+    border-radius: 15px;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 11px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  footer div:nth-child(2) {
+    border: 0.5rem solid #3C2313;
+    background-color: #3C2313;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-direction: row;
+  }
+  footer div:nth-child(2) article:first-child {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer div:nth-child(2) article:first-child img {
+    width: 10.56px;
+    height: 10px;
+  }
+  footer div:nth-child(2) article:first-child h1 {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  footer div:nth-child(2) article:first-child h1 span {
+    color: #3C2313;
+  }
+  footer div:nth-child(2) article:first-child img {
+    width: 19px;
+    height: 19px;
+  }
+  footer div:nth-child(2) article:first-child h1 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  footer div:nth-child(2) article:first-child h1 span {
+    color: #F0A83E;
+  }
+  footer div:nth-child(2) article:last-child {
+    order: 1;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+  footer div:nth-child(2) article:last-child aside {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+  }
+  footer div:nth-child(2) article:last-child aside img {
+    width: 47px;
+    height: 47px;
+  }
+  footer div:nth-child(2) article:last-child aside div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  footer div:nth-child(2) article:last-child aside div h4 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+  }
+  footer div:nth-child(2) article:last-child aside div p {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #8A8787;
+  }
+  footer div:last-child p {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
 }/*# sourceMappingURL=style.css.map */
